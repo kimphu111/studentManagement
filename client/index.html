@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản Lý Sinh Viên</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Quản Lý Sinh Viên</h1>
+  <div id="student-form">
+    <input type="text" id="name" placeholder="Tên sinh viên" />
+    <input type="number" id="age" placeholder="Tuổi" />
+    <input type="text" id="class" placeholder="Lớp" />
+    <button onclick="addStudent()">Thêm</button>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Tên</th>
+        <th>Tuổi</th>
+        <th>Lớp</th>
+        <th>Hành động</th>
+      </tr>
+    </thead>
+    <tbody id="student-list"></tbody>
+  </table>
+  <script src="script.js"></script>
+</body>
+</html>
