@@ -1,26 +1,119 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 20px;
-  }
-  
-  #student-form {
-    margin-bottom: 20px;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin: 20px 0;
+}
+
+#findStudent{
+  margin: 20px auto;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+thead {
+  background-color: #007BFF; /* Màu xanh nổi bật */
+  color: #fff;
+}
+
+thead th {
+  padding: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2; /* Màu nền xen kẽ */
+}
+
+tbody tr:hover {
+  background-color: #d9edf7; /* Hiệu ứng khi hover */
+  cursor: pointer;
+}
+
+td {
+  padding: 12px 15px;
+  text-align: left;
+  color: #555;
+}
+
+td:first-child {
+  font-weight: bold; /* Tên sinh viên nổi bật hơn */
+}
+
+th, td {
+  border: 1px solid #ddd;
+}
+
+@media screen and (max-width: 768px) {
   table {
-    margin: 0 auto;
-    width: 80%;
-    border-collapse: collapse;
+    width: 100%; /* Chiều rộng 100% trên thiết bị nhỏ */
+    margin: 10px auto;
   }
-  
-  th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: center;
+
+  thead {
+    display: none; /* Ẩn header để phù hợp trên mobile */
   }
-  
-  th {
-    background-color: #f4f4f4;
+
+  tbody tr {
+    display: block;
+    margin-bottom: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
-  
+
+  td {
+    display: block;
+    text-align: right;
+    font-size: 14px;
+    padding: 10px;
+    position: relative;
+  }
+
+  td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #007BFF;
+  }
+
+  td:first-child {
+    border-top: 1px solid #ddd;
+  }
+
+  td:last-child {
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+#pagination{
+  margin: 20px auto;
+  text-align: center;
+}
+
+
+#weather{
+  margin:  20px ;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  text-align: center;
+}

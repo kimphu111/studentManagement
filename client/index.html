@@ -1,30 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quản Lý Sinh Viên</title>
+  <title>Danh sách sinh viên</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <h1>Quản Lý Sinh Viên</h1>
-  <div id="student-form">
-    <input type="text" id="name" placeholder="Tên sinh viên" />
-    <input type="number" id="age" placeholder="Tuổi" />
-    <input type="text" id="class" placeholder="Lớp" />
-    <button onclick="addStudent()">Thêm</button>
+  <h1>Danh sách sinh viên</h1>
+
+  <h1>Tìm kiếm thông tin sinh viên</h1>
+
+  <!-- Form nhập tên sinh viên -->
+  <div id="findStudent">
+    <input type="text" id="search-input" placeholder="Nhập thông tin sinh viên ..." />
+    <button onclick="searchStudent()">Tìm kiếm</button>
   </div>
-  <table>
+
+
+  <table border="1">
     <thead>
       <tr>
         <th>Tên</th>
         <th>Tuổi</th>
         <th>Lớp</th>
-        <th>Hành động</th>
+        <th>Ngành học</th>
       </tr>
     </thead>
-    <tbody id="student-list"></tbody>
+    <tbody id="students-table">
+      <!-- Dữ liệu sẽ được thêm vào đây -->
+    </tbody>
   </table>
-  <script src="script.js"></script>
+  <!-- cacs nut se nam o day -->
+  <div id="pagination">
+  </div>
+
+  <div id="weather">
+    <h2>Weather</h2>
+    
+    <div id="input">
+      <input id="cityInput" type="text" placeholder="Enter city name">
+      <button onclick="getWeather()">Get Weather</button>
+    </div>
+
+    <div id="weatherResult" class="result"></div>
+  </div>
+
+  <script src="script.js">
+  </script>
 </body>
+
 </html>
